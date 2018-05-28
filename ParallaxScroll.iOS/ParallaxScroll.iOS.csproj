@@ -156,4 +156,22 @@
       <Name>ParallaxScroll</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Fonts\PermanentMarker.ttf" />
+    <BundleResource Include="Resources\parallaxscroll.png" />
+    <BundleResource Include="Resources\parallaxscroll%402x.png" />
+    <BundleResource Include="Resources\parallaxscroll%403x.png" />
+    <BundleResource Include="Resources\shadow_parallax_depth1.png" />
+    <BundleResource Include="Resources\shadow_parallax_depth1%402x.png" />
+    <BundleResource Include="Resources\shadow_parallax_depth1%403x.png" />
+    <BundleResource Include="Resources\shadow_parallax_depth2.png" />
+    <BundleResource Include="Resources\shadow_parallax_depth2%402x.png" />
+    <BundleResource Include="Resources\shadow_parallax_depth2%403x.png" />
+    <BundleResource Include="Resources\sun.png" />
+    <BundleResource Include="Resources\sun%402x.png" />
+    <BundleResource Include="Resources\sun%403x.png" />
+    <BundleResource Include="Resources\cloudbiggest.png" />
+    <BundleResource Include="Resources\cloudbiggest%402x.png" />
+    <BundleResource Include="Resources\cloudbiggest%403x.png" />
+  </ItemGroup>
 </Project>

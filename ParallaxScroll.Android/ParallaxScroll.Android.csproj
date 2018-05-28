@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -82,6 +82,26 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\parallaxscroll.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\parallaxscroll.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\parallaxscroll.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\parallaxscroll.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\shadow_parallax_depth1.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\shadow_parallax_depth1.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\shadow_parallax_depth1.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\shadow_parallax_depth1.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\shadow_parallax_depth2.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\shadow_parallax_depth2.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\shadow_parallax_depth2.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\shadow_parallax_depth2.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\sun.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\sun.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\sun.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\sun.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\cloudbiggest.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\cloudbiggest.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\cloudbiggest.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\cloudbiggest.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
@@ -96,5 +116,8 @@
       <Name>ParallaxScroll</Name>
     </ProjectReference>
   </ItemGroup>
- <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Fonts\PermanentMarker.ttf" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

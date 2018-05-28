@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ParallaxScroll.WikiView">
+    <StackLayout>
+        <Label
+            Text="Parallax scrolling is a technique in computer graphics where background images move past the camera more slowly than foreground images, creating an illusion of depth in a 2D scene and adding to the sense of immersion in the virtual experience." />
+        <Label
+            Text="The technique grew out of the multiplane camera technique used in traditional animation[2] since the 1930s. Parallax scrolling was popularized in 2D computer graphics and video games by the arcade games Moon Patrol[3][4] and Jungle Hunt,[5] both released in 1982. Some parallax scrolling had earlier been used by the 1981 arcade game Jump Bug." />
+        <ContentView Padding="0,10">
+            <Label Text="Layer method" FontAttributes="Bold" />
+        </ContentView>
+        <Label
+            Text="Some display systems support multiple background layers that can be scrolled independently in horizontal and vertical directions and composited on one another, simulating a multiplane camera. On such a display system, a game can produce parallax by simply changing each layer's position by a different amount in the same direction. Layers that move more quickly are perceived to be closer to the virtual camera. Layers can be placed in front of the playfield—the layer containing the objects with which the player interacts—for various reasons such as to provide increased dimension, obscure some of the action of the game, or distract the player." />
+        <ContentView Padding="0,10">
+            <Label Text="Sprite method" FontAttributes="Bold" />
+        </ContentView>
+        <Label
+            Text="Programmers may also make pseudo-layers of sprites—individually controllable moving objects drawn by hardware on top of or behind the layers—if they are available on the display system. For instance Star Force, an overhead-view vertically scrolling shooter for NES, used this for its starfield, and Final Fight for the Super NES used this technique for the layer immediately in front of the main playfield.
+The Amiga computer has sprites which can have any height and can be set horizontal with the copper co-processor, which makes them ideal for this purpose. Risky Woods on the Amiga uses sprites multiplexed with the copper to create an entire fullscreen parallax background layer [7] as an alternative to the system's dual playfield mode." />
+
+        <ContentView Padding="0,10">
+            <Label Text="Repeating pattern/animation method" FontAttributes="Bold" />
+        </ContentView>
+        <Label
+            Text="Scrolling displays built up of individual tiles can be made to 'float' over a repeating background layer by animating the individual tiles' bitmaps in order to portray the parallax effect. Color cycling can be used to animate tiles quickly on the whole screen. This software effect gives the illusion of another (hardware) layer. Many games used this technique for a scrolling star-field, but sometimes a more intricate or multi-directional effect is achieved, such as in the game Parallax by Sensible Software." />
+        <ContentView Padding="0,10">
+            <Label Text="Raster method" FontAttributes="Bold" />
+        </ContentView>
+        <Label
+            Text="In raster graphics, the lines of pixels in an image are typically composited and refreshed in top-to-bottom order with a slight delay (called the horizontal blanking interval) between drawing one line and drawing the next line. Games designed for older graphical chipsets—such as those of the third and fourth generations of video game consoles, those of dedicated TV games, or those of similar handheld systems—take advantage of the raster characteristics to create the illusion of more layers.
+
+Some display systems have only one layer. These include most of the classic 8-bit systems (such as the Commodore 64, Nintendo Entertainment System, Sega Master System, PC Engine/TurboGrafx-16 and original Game Boy). The more sophisticated games on such systems generally divide the layer into horizontal strips, each with a different position and rate of scrolling. Typically, strips higher on the screen will represent things farther away from the virtual camera or one strip will be held stationary to display status information. The program will then wait for horizontal blank and change the layer's scroll position just before the display system begins to draw each scanline. This is called a 'raster effect' and is also useful for changing the system palette to provide a gradient background.
+
+Some platforms (such as the Commodore 64, Amiga, Sega Master System,[8] PC Engine/TurboGrafx-16,[9] Sega Mega Drive/Genesis, Super NES, Game Boy, Game Boy Advance and Nintendo DS) provide a horizontal blank interrupt for automatically setting the registers independently of the rest of the program. Others, such as the NES, require the use of cycle-timed code, which is specially written to take exactly as long to execute as the video chip takes to draw one scanline, or timers inside game cartridges that generate interrupts after a given number of scanlines have been drawn. Many NES games use this technique to draw their status bars, and Teenage Mutant Ninja Turtles II: The Arcade Game and Vice: Project Doom for NES use it to scroll background layers at different rates.
+
+More advanced raster techniques can produce interesting effects. A system can achieve a very effective depth of field if layers with rasters are combined; Sonic the Hedgehog, Sonic The Hedgehog 2, ActRaiser, Lionheart and Street Fighter II used this effect well. If each scanline has its own layer, the Pole Position effect is produced, which creates a pseudo-3D road (or a pseudo-3D ball court as in NBA Jam) on a 2D system. If the display system supports rotation and scaling in addition to scrolling—an effect popularly known as Mode 7—changing the rotation and scaling factors can draw a projection of a plane (as in F-Zero and Super Mario Kart) or can warp the playfield to create an extra challenge factor.
+
+Another advanced technique is row/column scrolling, where rows/columns of tiles on a screen can be scrolled individually.[10] This technique is implemented in the graphics chips of various Sega arcade system boards since the Sega Space Harrier and System 16,[11] the Sega Mega Drive/Genesis console,[12] and the Capcom CP System,[13] Irem M-92[14] and Taito F3 System[15] arcade game boards." />
+    </StackLayout>
+</ContentView>

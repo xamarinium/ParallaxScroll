@@ -1,7 +1,94 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:ParallaxScroll" x:Class="ParallaxScroll.MainPage">
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:parallaxScroll="clr-namespace:ParallaxScroll;assembly=ParallaxScroll"
+             x:Class="ParallaxScroll.MainPage">
+    <ScrollView x:Name="ParallaxScrollView">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            
+            <BoxView  />
+
+            <RelativeLayout Grid.Row="0"
+
+                            x:Name="ParalaxContainer"
+                            VerticalOptions="Center"
+                            HeightRequest="200"
+                            BackgroundColor="#8DBDCD">
+                
+                <Image x:Name="SunImage"
+                       Source="sun.png"
+                       Aspect="AspectFit"
+                       WidthRequest="40"
+                       HeightRequest="40"
+                       TranslationX="10"
+                       TranslationY="10"
+                       VerticalOptions="End" />
+                
+
+                <Image x:Name="CloudBiggestImage"
+                       Source="cloudbiggest.png"
+                       Aspect="AspectFit"
+                       WidthRequest="60"
+                       HeightRequest="40"
+                       TranslationX="65"
+                       TranslationY="20"
+                       VerticalOptions="End" />
+                
+                <Image x:Name="CloudSmallImage"
+                       Source="cloudbiggest.png"
+                       Aspect="AspectFit"
+                       WidthRequest="30"
+                       HeightRequest="20"
+                       TranslationX="20"
+                       TranslationY="62"
+                       VerticalOptions="End" />
+                
+                <Image x:Name="CloudMediumImage"
+                       Source="cloudbiggest.png"
+                       Aspect="AspectFit"
+                       WidthRequest="40"
+                       HeightRequest="30"
+                       TranslationX="30"
+                       VerticalOptions="End" />
+
+                <Image x:Name="SkyscrapersImage"
+                       Source="shadow_parallax_depth2.png"
+                       Aspect="AspectFill"
+                       VerticalOptions="End" />
+
+                <Image x:Name="ShadowCityImage"
+                       Source="shadow_parallax_depth1.png"
+                       Aspect="AspectFill"
+                       VerticalOptions="End" />
+
+                <Image x:Name="CityImage"
+                       Source="parallaxscroll.png"
+                       Aspect="AspectFill"
+                       VerticalOptions="End" />
+
+                <Label x:Name="ParallaxLabel"
+                       Rotation="-7.5"
+                       FormattedText="Parallax&#x0a;Scroll"
+                       FontSize="Large"
+                       TextColor="White"
+                       HorizontalTextAlignment="Center"
+                       VerticalOptions="CenterAndExpand">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS">Permanent Marker</On>
+                            <On Platform="Android">Fonts/PermanentMarker.ttf#Permanent Marker</On>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+            </RelativeLayout>
+
+            <parallaxScroll:WikiView Grid.Row="1" Padding="20" />
+
+        </Grid>
+    </ScrollView>
 </ContentPage>
